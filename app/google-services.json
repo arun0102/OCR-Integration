@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "555369718762",
+    "firebase_url": "https://ocr-integration-7d459.firebaseio.com",
+    "project_id": "ocr-integration-7d459",
+    "storage_bucket": "ocr-integration-7d459.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:555369718762:android:b3714b4ad2037a96028893",
+        "android_client_info": {
+          "package_name": "arun.pkg.ocrintegration"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "555369718762-ralo715l8n4ut12u5m4h6e2j4a9q402q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDRLG09uUomvEy4O3LgvHyvtc9SoIexkA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "555369718762-ralo715l8n4ut12u5m4h6e2j4a9q402q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="arun.pkg.ocrintegration.main.MainViewModel" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.main.MainFragment">
+
+            <Button
+                android:id="@+id/btn_select_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:onClick="@{() -> viewModel.onGalleryButtonClicked()}"
+                android:text="Select image from gallery"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_capture_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="@{() -> viewModel.onCameraButtonClicked()}"
+                android:text="Capture new image from Camera"
+                app:layout_constraintLeft_toLeftOf="@id/btn_select_image"
+                app:layout_constraintTop_toBottomOf="@id/btn_select_image" />
+
+
+            <ImageView
+                android:id="@+id/img_image"
+                picture="@{viewModel.imagePath}"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintLeft_toLeftOf="@id/btn_capture_image"
+                app:layout_constraintTop_toBottomOf="@id/btn_capture_image"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/txt_firebase_results"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="@{viewModel.firebaseResult}"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toLeftOf="@id/img_image"
+                app:layout_constraintTop_toBottomOf="@id/img_image"
+                tools:text="Firebase results: abcd" />
+
+            <TextView
+                android:id="@+id/txt_tesseract_results"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="@{viewModel.tesseractResult}"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toLeftOf="@id/txt_firebase_results"
+                app:layout_constraintTop_toBottomOf="@id/txt_firebase_results"
+                tools:text="Tesseract results: abcd" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

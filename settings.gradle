@@ -1,0 +1,18 @@
+rootProject.name='OCR Integration'
+include ':app'
+
+include ':core-lib'
+include ':non-core-lib'
+
+include ':firebase-ml-domain'
+include ':firebase-ml-data'
+
+include ':tesseract-domain'
+include ':tesseract-data'
+
+include ':libraries:opencv'
+include ':opencv-data'
+include ':opencv-domain'
+
+include ':huawei-ml-data'
+include ':huawei-ml-domain'
